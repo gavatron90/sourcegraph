@@ -19,12 +19,13 @@
     "build-ts": "tsc -b .",
     "graphql": "gulp graphQLTypes",
     "graphql-lint": "graphql-schema-linter --old-implements-syntax --comment-descriptions cmd/frontend/graphqlbackend/schema.graphql",
-    "prepublish": "gulp generate",
+    "prepublish": "yarn run snyk-protect && gulp generate",
     "test": "jest --testPathIgnorePatterns e2e regression integration",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook",
     "storybook:smoke-test": "yarn run storybook --smoke-test",
-    "deduplicate": "yarn-deduplicate -s fewer"
+    "deduplicate": "yarn-deduplicate -s fewer",
+    "snyk-protect": "snyk protect"
   },
   "browserslist": [
     "last 1 version",
@@ -274,9 +275,11 @@
     "uuid": "^3.4.0",
     "webext-domain-permission-toggle": "^1.0.0",
     "webextension-polyfill": "^0.6.0",
-    "whatwg-url": "^8.0.0"
+    "whatwg-url": "^8.0.0",
+    "snyk": "^1.316.1"
   },
   "resolutions": {
     "history": "4.5.1"
-  }
+  },
+  "snyk": true
 }
