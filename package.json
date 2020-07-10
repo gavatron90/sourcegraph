@@ -241,7 +241,7 @@
     "he": "^1.2.0",
     "highlight.js": "^9.18.1",
     "is-absolute-url": "^3.0.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.16",
     "marked": "^0.8.0",
     "mdi-react": "^6.6.0",
     "minimatch": "^3.0.4",
