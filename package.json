@@ -19,12 +19,13 @@
     "build-ts": "tsc -b .",
     "graphql": "gulp graphQLTypes",
     "graphql-lint": "graphql-schema-linter --old-implements-syntax --comment-descriptions cmd/frontend/graphqlbackend/schema.graphql",
-    "prepublish": "gulp generate",
+    "prepublish": "yarn run snyk-protect && gulp generate",
     "test": "jest --testPathIgnorePatterns e2e regression integration",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook",
     "storybook:smoke-test": "yarn run storybook --smoke-test",
-    "deduplicate": "yarn-deduplicate -s fewer"
+    "deduplicate": "yarn-deduplicate -s fewer",
+    "snyk-protect": "snyk protect"
   },
   "browserslist": [
     "last 1 version",
@@ -237,12 +238,12 @@
     "downshift": "^3.4.8",
     "focus-visible": "^5.0.2",
     "got": "^9.6.0",
-    "graphiql": "^0.13.2",
+    "graphiql": "^0.17.0",
     "he": "^1.2.0",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "is-absolute-url": "^3.0.3",
-    "lodash": "^4.17.15",
-    "marked": "^0.8.0",
+    "lodash": "^4.17.20",
+    "marked": "^1.1.1",
     "mdi-react": "^6.6.0",
     "minimatch": "^3.0.4",
     "monaco-editor": "^0.18.1",
@@ -261,7 +262,7 @@
     "recharts": "^1.8.5",
     "regenerator-runtime": "^0.13.3",
     "rxjs": "^6.5.3",
-    "sanitize-html": "^1.21.1",
+    "sanitize-html": "^2.0.0",
     "semver": "^7.1.2",
     "slugify": "^1.3.6",
     "sourcegraph": "link:packages/sourcegraph-extension-api",
@@ -274,9 +275,11 @@
     "uuid": "^3.4.0",
     "webext-domain-permission-toggle": "^1.0.0",
     "webextension-polyfill": "^0.6.0",
-    "whatwg-url": "^8.0.0"
+    "whatwg-url": "^8.0.0",
+    "snyk": "^1.437.3"
   },
   "resolutions": {
     "history": "4.5.1"
-  }
+  },
+  "snyk": true
 }
