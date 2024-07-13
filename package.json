@@ -330,7 +330,7 @@
     "@visx/scale": "^2.17.0",
     "@visx/xychart": "^1.7.3",
     "bloomfilter": "^0.0.18",
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^5.0.0",
     "classnames": "^2.2.6",
     "comlink": "^4.3.0",
     "copy-to-clipboard": "^3.3.1",
